@@ -1,0 +1,41 @@
+</!DOCTYPE html>
+  <html>
+  <head>
+  	<title>Speech to text</title>
+  </head>
+ {% block head_meta %}{% endblock %}
+    {% block head_css %}
+      <link rel="icon" type="image/png" href="/static/assets/images/favicon.png">
+
+      {% for entry in get_unloaded_chunks(css_manifest('theme'), loaded_chunks) %}
+        <link rel="stylesheet" type="text/css" href="{{ entry }}" />
+      {% endfor %}
+
+      {% if entry %}
+        {% set entry_files = css_manifest(entry) %}
+        {% for entry in get_unloaded_chunks(entry_files, loaded_chunks) %}
+          <link rel="stylesheet" type="text/css" href="{{ entry }}" />
+        {% endfor %}
+      {% endif %}
+
+    {% endblock %}
+
+    {% with filename="theme" %}
+      {% include "partials/_script_tag.html" %}
+    {% endwith %}
+     <input
+      type="hidden"
+      name="csrf_token"
+      id="csrf_token"
+      value="{{ csrf_token() if csrf_token else '' }}"
+    >
+  <body>
+  
+    {% block body %}
+      <div id="app" data-bootstrap="{{ bootstrap_data }}">
+        <img src="/static/assets/images/loading.gif" style="width: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%)">
+      </div>
+    {% endblock %}
+  
+  </body>
+  </html>

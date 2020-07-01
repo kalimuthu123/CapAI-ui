@@ -1,0 +1,17 @@
+{
+  "brain.png": "/static/assets/dist/brain.04b9e470.png",
+  "capai.css": "/static/assets/dist/capai.3274a1089825bdfa9e31.entry.css",
+  "capai.js": "/static/assets/dist/capai.3274a1089825bdfa9e31.entry.js",
+  "entrypoints": {
+    "capai": {
+      "css": [
+        "/static/assets/dist/capai.3274a1089825bdfa9e31.entry.css"
+      ],
+      "js": [
+        "/static/assets/dist/capai.3274a1089825bdfa9e31.entry.js"
+      ]
+    }
+  },
+  "flowchart.png": "/static/assets/dist/flowchart.e3dab398.png",
+  "worldwide.png": "/static/assets/dist/worldwide.3e94efe7.png"
+}
