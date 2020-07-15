@@ -1,5 +1,11 @@
 # CapAI-ui
 
+Author:
+
+Kalimuthu P   </Br>
+
+1995kalimuthu@gmail.com
+
 Conversational Business Intelligence Bot with  CapAI Module
 
 Artificial Intelligence Methods for Conversational Agents in Healthcare
